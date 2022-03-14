@@ -13,7 +13,7 @@ const LocationInfo = () => {
         axios.get(`https://rickandmortyapi.com/api/location/${ramdos}`).then(res=>setLocation(res.data));
     }, [])
 
-      const pageCharacters = 7;
+      const pageCharacters = 6;
       const indexLast = page * pageCharacters;
       const indexFirst= indexLast - pageCharacters;
       const characterPages =  location.residents?.slice(indexFirst,indexLast);
