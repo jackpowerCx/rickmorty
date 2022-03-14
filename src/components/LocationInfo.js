@@ -11,7 +11,7 @@ const LocationInfo = () => {
     useEffect(() => {
         let ramdos = Math.floor(Math.random() *126)+ 1;
         axios.get(`https://rickandmortyapi.com/api/location/${ramdos}`).then(res=>setLocation(res.data));
-    }, [1])
+    }, [])
 
       const pageCharacters = 7;
       const indexLast = page * pageCharacters;
