@@ -6,7 +6,7 @@ import { useState,useEffect } from 'react';
 const SearchBox = ({setLocation}) => {
     const [locationName, setLocationName]= useState("");
     const [ listLocationsName, setListLocationsName ] = useState([])
-    const[toggles, setToggles] =useState(false);
+    
 
     const search =(locationId)=>{ 
         if(locationId){
@@ -15,7 +15,7 @@ const SearchBox = ({setLocation}) => {
              setLocation(res.data);
             })
         }
-        
+
     }
 
 
