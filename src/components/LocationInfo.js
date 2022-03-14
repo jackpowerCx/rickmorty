@@ -6,9 +6,10 @@ import image2 from '../images/image2.png';
 import SearchBox from './SearchBox';
 const LocationInfo = () => {
     const [location, setLocation] = useState([]);
-    let ramdos = Math.floor(Math.random() *126)+ 1;
+    
     const[page,setPage]=useState(1);
     useEffect(() => {
+        let ramdos = Math.floor(Math.random() *126)+ 1;
         axios.get(`https://rickandmortyapi.com/api/location/${ramdos}`).then(res=>setLocation(res.data));
     }, [1])
 
